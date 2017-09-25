@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+}
+
+#nav {
+  border: 1px solid red;
+  background-color: #ff6600;
+
+  /*定位你的導覽列*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.menu {
+  float: right;
+}
+
+h1 {
+  text-align: center;
+}
+
+#about h1 {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+
+.menu li {
+  display: inline-block;        /*讓水平排列的區塊以 block 模式呈現*/
+
+  width: 150px;
+  padding: 10px 0px;
+
+  border: 1px solid #fff;
+  border-radius: 8px;           /*邊界半徑:圓角用*/
+
+  list-style-type: none;        /*列表樣式:沒有標誌，不使用編號*/
+  text-align: center;           /*本文對其方式:置中*/
+  background-color: #ff6600;  /*背景顏色*/
+  color: #fff;                /*文字顏色*/
+}
+
+a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+li:hover {                      /*:hover 是一種 pseudo-classes (偽類別)*/
+  border: 1px solid #ff6600;
+  background-color: #fff;
+}
+
+li:hover a {
+  color: #ff6600;
+  font-weight: 800;
+}
+
+.container {
+  /*border: 1px solid #ccc;  /* 標示用，完成排版後刪除*/
+  width: 800px;
+  margin: 0 auto;
+}
+
+
+#content {
+  /*border: 1px solid blue; /* 標示用，完成排版後刪除*/
+  position: relative;
+  top: 42px;
+  padding: 15px;
+}
+
+#content > .container > div {
+  padding: 42px 0;
+}
+
+hr.bar {
+  border: 2px solid #ff6600;
+  width: 80px;
+}
+
+/* about me */
+#my-avatar {
+  /*border: 1px solid red;  /* 標示用，排版完記得拿掉 */
+  float: left;  /*Float 屬性讓原本應該一次佔滿一行的 block 元素變得可以緊靠在一起。因此，img 元素靠向了左方，周圍的元素環繞著 img 流動。*/
+  margin-right: 20px;
+}
+
+#my-avatar img {
+  width: 200px;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+table {
+  font-size: 14px;
+  text-align: left;
+}
+
+th, td {
+  vertical-align: top;
+}
+
+
+td {
+  color: #666;
+  padding-left: 10px;
+}
+
+hr {
+  border: 0.5px solid #eee;
+}
+
+/* my work */
+
+.item {
+  position: relative;
+  max-width: 30%;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.item-info {
+  /*border: 1px solid red;                    /* 標示用，排版完記得拿掉 */
+  background-color: rgba(255,255,255,.8);   /* 背景半透明 */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+  padding: 25px 10px;
+
+  opacity: 0;               /*透明度方法一*/
+  /*display: none;          /*透明度方法二*/
+}
+/*
+Position 的行為有四種：
+    Static - 預設值，等於沒有設定；
+    Relative - 從原始 static 的位置為原點，進行相對位移；
+    Absolute - 從上層某個已啟用 position 座標的原點來起算，如果找不到祖先，就以 body做為原點；
+    Fixed - 以視窗的左上角做為原點，而且不會隨著捲軸移動。
+*/
+
+.item-info:hover {          /*透明度方法一*/
+  opacity: 1;
+}
+/*
+.item:hover .item-info {    /*透明度方法二
+  display: block;
+}
+*/
+
+.item img{
+  width: 100%;
+}
+
+#my-work-gallery {
+    text-align: center;
+}
+
+/*contact-me*/
+
+#contact-me {
+  /*border: 1px solid green;  /* 標示用，完成後刪除 */
+}
+
+form.contact-form {
+  /*border: 1px solid red;  /* 標示用，完成後刪除 */
+  width: 50%;
+  margin: 0 auto;
+}
+
+/*修改 label 和 input 樣式*/
+.form-row {
+  margin-bottom: 15px;
+}
+
+.form-row input, .form-row textarea {
+  border-radius: 3px;           /*邊界半徑:圓角用*/
+  width: 100%;
+  border: 1px solid #D6D9DC;
+  padding: 7px;
+}
+
+.form-row textarea {
+  resize: none;          /*調整大小:關閉*/
+  height: 5em;
+}
+
+/*修改 button*/
+.form-row button {
+  border: none;
+  border-radius: 3px;
+  padding: 10px 15px;
+  cursor: pointer;    /*改變滑鼠游標的形狀*/
+}
+
+.form-row button[type="sumbit"] {
+  background-color: #5995DA;
+  color: #FFFFFF;
+}
+
+.form-row button:hover {    /*滑鼠過去*/
+  background-color: #76AEED;
+}
+
+.form-row button:active {   /*點擊*/
+  background-color: #407FC7;
+}
+
+/*
+#nav {
+  border: 1px solid red;
+}
+
+#content {
+  border: 1px solid blue;
+}
+
+.container {
+  border: 1px solid #ccc;
+}
+
+#about, #my-work, #contact-me {
+  border: 1px solid yellow;
+}
+*/
